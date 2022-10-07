@@ -1,0 +1,41 @@
+.message{
+position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.message__body{
+    display: flex;
+}
+.myMessage{
+    justify-content: flex-end;
+}
+.message__image{
+    align-self: flex-start;
+    margin-right: 5px;
+}
+.message__image img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.message__content{
+    max-width: 250px;
+    padding: 5px 10px;
+    border-radius: 5px/5px;
+    background:linear-gradient(45deg, #DC2424,#4A569D);
+    word-break: break-word;
+}
+.myMessageContent {
+    background: linear-gradient(90deg,#00B4DB,#0083B0);
+    color: #f5f5f5;
+}
+.message__content h5,p{
+    margin: 0;
+}
+.message__content p{
+    color: #f5f5f5;
+}
+.message__content a{
+    color: currentColor;
+}

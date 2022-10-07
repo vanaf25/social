@@ -1,0 +1,5 @@
+@media (max-width: 545px) {
+    .ant-pagination-item{
+        min-width: 18px;
+    }
+}

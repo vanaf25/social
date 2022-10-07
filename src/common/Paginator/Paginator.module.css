@@ -1,0 +1,14 @@
+.selectedPage{
+    padding: 10px 15px;
+    border-radius: 10px/10px;
+    background-color: #35b64a;
+    display: inline-block;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+.selectedPage.active{
+    background-color: #f2533c;
+}

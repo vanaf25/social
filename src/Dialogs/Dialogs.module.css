@@ -1,0 +1,60 @@
+.friends{
+    border-right:1px solid #dbdbdb;
+    height:500px;
+    overflow-y: auto;
+}
+.friendsMobile{
+    border-right:1px solid #dbdbdb;
+}
+.friends__friendDataContainer{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid #dbdbdb;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    background-color: #f0f2f5;
+}
+.friends__friendDataContainer_mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.friends__friendData{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.friends__myLogin{
+    border-bottom:1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 5px;
+    justify-content: center;
+}
+.friends__myLogin h2{
+    margin-bottom: 0;
+}
+.dialogsContainer{
+    margin: 0 20px;
+}
+.friendData__logo{
+    align-self: flex-start;
+
+}
+.friendData__text{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 767px) {
+    .messageBlock{
+        display: none;
+    }
+    .dialogsContainer{
+        margin: 0;
+    }
+}

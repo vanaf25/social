@@ -1,0 +1,39 @@
+.info__p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact{
+    padding-left: 15px;
+}
+.contact b,a{
+    font-size: 16px;
+}
+.contact a{
+    color: #1890ff;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.contact a:hover{
+    border-bottom: 1px solid #1890ff;
+}
+.main__infoUser{
+    margin-left: 20px;
+    align-self: center;
+}
+.main__infoTitle{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.buttonContainer{
+    display: flex;
+    max-width: max-content;
+    margin: 0 auto;
+}
+@media (max-width: 545px) {
+    .contact b{
+        font-size: 14px;
+    }
+    .contact a{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,21 @@
+.textarea{
+    outline: none;
+    padding: 10px;
+}
+.error input, .error .textarea{
+border: 1px solid red;
+    box-shadow: 0 0 10px red;
+    display: block;
+}
+.errorMessage{
+    padding: 5px;
+    background-color: #f24941;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px/10px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,17 @@
+.user{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.user__content{
+    display: flex;
+}
+.user__logo{}
+.user__logo img{
+    height: 50px;
+    border-radius: 50%;
+}
+.user__login{
+    align-self: center;
+    margin-left: 10px;
+    font-size: 20px;
+}
