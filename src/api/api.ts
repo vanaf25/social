@@ -1,7 +1,5 @@
 import axios from "axios";
 import {UserType} from "../state/types";
-import {QueryType} from "./theme";
-import {GraphQLSchema} from "graphql";
 const apiKeys={
     vanaf:"04f60982-c0c6-4688-b8f7-74c748e909f8",
     messi:"b774922c-f2cb-4b3b-9d16-f5fab39a2bed",
@@ -43,6 +41,3 @@ export type ResponseType<D={},RC=ResultCodesEnum>={
     messages:Array<string>,
     resultCode:RC
 }
-export default new GraphQLSchema({
-    query: QueryType,
-});

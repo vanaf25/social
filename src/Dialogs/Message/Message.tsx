@@ -8,7 +8,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {getId} from "../../state/auth-selectors";
 import {addMessageToSpam, deleteMessage, MessageType} from "../../state/dialogs-reducer";
 import {Link} from "react-router-dom";
-import {log} from "util";
 export const Message:React.FC<MessageType & {photo:string | null,userId:number,addedAt:string}>=React.memo(
     ({body,id,photo,senderId,viewed,userId,addedAt})=>{
     const myId=useSelector(getId);

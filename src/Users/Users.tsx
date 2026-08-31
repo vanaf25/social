@@ -12,7 +12,6 @@ import {
     getUsers,
 } from "../state/users-selectors";
 import { useHistory } from "react-router-dom";
-import * as queryString from "querystring";
 import Preloader from "../common/Preloader/Preloader";
 import {Empty} from "antd";
 const Users:React.FC=()=>{
@@ -39,7 +38,13 @@ type QueryParamsType={term?:string,page?:string,friend?:string,size?:string}
     const dispatch=useDispatch();
     const history=useHistory();
     useEffect(()=>{
-        const parsed=queryString.parse(history.location.search.substr(1)) as QueryParamsType;
+        const searchParams = new URLSearchParams(history.location.search);
+        const parsed: QueryParamsType = {
+            term: searchParams.get("term") || undefined,
+            page: searchParams.get("page") || undefined,
+            friend: searchParams.get("friend") || undefined,
+            size: searchParams.get("size") || undefined,
+        };
         let actualPage=currentPage;
         let  actualFilter=filter;
         let actualPageSize=pageSize
@@ -61,9 +66,13 @@ type QueryParamsType={term?:string,page?:string,friend?:string,size?:string}
         if (filter.friend!==null) query.friend=String(filter.friend)
         if (currentPage>1) query.page=String(currentPage);
         if (pageSize>10) query.size=String(pageSize)
+        const searchParams = new URLSearchParams();
+        Object.entries(query).forEach(([key, value]) => {
+            if (value) searchParams.set(key, value);
+        });
        history.push({
            pathname:"/users",
-           search:queryString.stringify(query)
+           search:searchParams.toString()
        });
     },[filter,currentPage,pageSize]);
    const onFilter=(values:UsersSearchFormType)=>{
